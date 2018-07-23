@@ -4,7 +4,7 @@
 </h1>
 
 <p align="center">
-A Javascript Implementation for Verifiable Random Functions
+A pure Javascript Implementation of [Verifiable Random Functions](https://tools.ietf.org/html/draft-irtf-cfrg-vrf-02)
 </p>
 
 <p align="center">
