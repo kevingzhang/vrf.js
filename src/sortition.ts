@@ -119,7 +119,7 @@ export function verifySort(
   W: Big,
 ) {
   const v = Buffer.concat([seed, role]);
-  if (!verify(publicKey, v, value, proof)) {
+  if (!verify(publicKey, v, proof, value)) {
     return zero;
   }
   return getVotes(value, w, tau.div(W));
