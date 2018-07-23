@@ -78,3 +78,4 @@ if (+j > 0) {
 - [ ] browser support
 - [ ] web examples
 - [ ] visualization
+- [ ] RSA-FDH-VRF
