@@ -1,3 +1,6 @@
 examples
 src
 .idea
+.vscode
+yarn.lock
+tsconfig.json
