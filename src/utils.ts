@@ -1,8 +1,8 @@
 import { Big } from 'big.js';
 import { Buffer } from 'buffer';
-import * as crypto from 'crypto';
 import * as elliptic from 'elliptic';
 import { EDDSA } from './constant';
+const shajs = require('sha.js')
 
 export function reverseB(buffer: Buffer) {
   return B(buffer).reverse() as Buffer;
@@ -10,8 +10,8 @@ export function reverseB(buffer: Buffer) {
 
 export type Point = elliptic.curve.edwards.Point
 
-export const sha256 = () => crypto.createHash('sha256');
-export const sha512 = () => crypto.createHash('sha512');
+export const sha256 = () => shajs('sha256');
+export const sha512 = () => shajs('sha512');
 
 export function B(data: any) {
   if (typeof data === 'string') {
@@ -24,9 +24,9 @@ export function N(n: Big | number | string): Big {
   switch (typeof n) {
     case 'number':
     case 'string':
-      return new Big(n)
+      return new Big(n);
     default:
-      return n as any
+      return n as any;
   }
 }
 

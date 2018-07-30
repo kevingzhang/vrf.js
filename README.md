@@ -75,7 +75,7 @@ if (+j > 0) {
 
 ## TODOs
 
-- [ ] browser support
+- [x] browser support
 - [ ] web examples
 - [ ] visualization
 - [ ] RSA-FDH-VRF
