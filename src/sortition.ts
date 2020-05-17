@@ -13,7 +13,17 @@ const zero = new Big(0);
  * @returns {Big}
  */
 export function combination(m: Big, n: Big) {
-  return array(m, n).div(array(n, n));
+  //return array(m, n).div(array(n, n));  
+  let num = one;
+  let count = zero;
+  for (let i = m; i.gt(zero); i = i.minus(one)) {
+    if (count.eq(n)) {
+      break;
+    }
+    num = num.mul(i).div(n.minus(m).plus(i));
+    count = count.plus(one);
+  }
+  return num;
 }
 
 /**
